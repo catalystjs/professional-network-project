@@ -1,0 +1,10 @@
+@model beltexam2.Models.User
+
+@{
+    ViewData["Title"] = "User Framework";
+    ViewData["NavBar"] = true;
+}
+<div class=user-box>
+    <h2>@Model.name()</h2>
+    <p>Description: @Model.Description</p>
+</div>

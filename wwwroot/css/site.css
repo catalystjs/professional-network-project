@@ -1,0 +1,179 @@
+/*Write all of your CSS here*/
+* {
+    box-sizing: border-box;
+}
+
+.index-box {
+    width: 100%;
+}
+
+.index-box .register-box {
+    padding: 2%;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+}
+
+.index-box .login-box {
+    padding: 2%;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+}
+
+.text-danger {
+    color: red;
+}
+
+.navbar h2 {
+    display: inline-block;
+}
+
+.navbar .right-side-box {
+    width: 25%;
+    display: inline-block;
+    float: right;
+    clear: all;
+    vertical-align: middle;
+}
+
+.navbar .logout-button,
+.navbar .home-button {
+    margin-left: 3%;
+}
+
+.indent {
+    margin-left: 3%;
+}
+
+.profile-page .description-box {
+    width: 20%;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.profile-page .description-box p {
+    margin: 0%;
+    padding: 2%;
+}
+
+.profile-page .networks-box {
+    width: 20%;
+    height: 100px;
+    border: 1px solid black;
+    overflow-y: scroll;
+}
+
+.profile-page .networks-box p {
+    margin: 0%;
+    padding: 5% 5% 2% 5%;
+}
+
+.profile-page .invitations-table {
+    border: 1px solid black;
+}
+
+.profile-page .invitations-table {
+    border-collapse: collapse;
+    width: 30%;
+    border: 2px solid black;
+}
+
+.profile-page .invitations-table tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}
+
+.profile-page .invitations-table th {
+    padding: 1% 1% 1% 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.profile-page .invitations-table td {
+    padding: 1% 1% 1% 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.profile-page .invitations-table .name-header {
+    width: 200px;
+}
+
+.profile-page .invitations-table .action-header {
+    width: 200px;
+}
+
+.profile-page .invitations-table th {
+    text-align: left;
+}
+
+.allusers-page .users-table {
+    border-collapse: collapse;
+    width: 30%;
+    border: 2px solid black;
+}
+
+.allusers-page .users-table tbody tr:nth-child(odd) {
+   background-color: #ccc;
+}
+
+.allusers-page .users-table th {
+    padding: 1% 1% 1% 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.allusers-page .users-table td {
+    padding: 1% 1% 1% 1%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.allusers-page .users-table .name-header {
+    width: 200px;
+}
+
+.allusers-page .users-table .action-header {
+    width: 100px;
+}
+
+.allusers-page .users-table th {
+    text-align: left;
+}
+
+.add-auction-page {
+    width: 75%;
+}
+
+.add-auction-page .description {
+    width: 30%;
+    resize: none;
+}
+
+.add-auction-page .product-input {
+    width: 30%;
+}
+
+.register-page .register-button,
+.login-page .login-button,
+.add-auction-page .create-auction-button,
+.bid-page .create-bid-button {
+    margin-top: 1%;
+    box-shadow: 3px 3px 3px black;
+}
+
+.bid-page .italic {
+    font-style: italic;
+}
+
+.bid-page .top-bid-box {
+    display: inline-block;
+    width: 25%;
+}
+
+.bid-page .add-bid-form {
+    display: inline-block;
+    width: 40%;
+}

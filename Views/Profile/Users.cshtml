@@ -1,0 +1,25 @@
+@model ICollection<beltexam2.Models.User>
+
+@{
+    ViewData["Title"] = "Auctions Add Page";
+    ViewData["NavTitle"] = "New Auction";
+}
+<div class=allusers-page>
+    <h2>Users you may want to connect with:</h2>
+    <table class="users-table">
+        <tr>
+            <th class="name-header">Name</th>
+            <th class="action-header">Action</th>
+        </tr>
+        @* Let's iterate through the collection of auctions*@
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td class="name-data"><a href="/user/@user.Id">@user.name()</a></td>
+                <td class="action-data">
+                    <a class="connect-button" href="/profile/invite/@user.Id/send">Connect</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

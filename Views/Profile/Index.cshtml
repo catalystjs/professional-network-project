@@ -1,0 +1,41 @@
+@model beltexam2.Models.User
+
+@{
+    ViewData["Title"] = "Profile Dashboard";
+    ViewData["NavTitle"] = $"Hi {Model.name()}!";
+}
+<div class=profile-page>
+    <p>Here is your profile description:</p>
+    <div class="description-box">
+        <p>@Model.Description</p>
+    </div>
+    <p>Your Professional Network:</p>
+    <div class="networks-box">
+        @foreach (var network in Model.Networks)
+        {
+            <p><a href="/user/@network.NetworkRelatedUserId">@network.NetworkRelatedUser.name()</a></p>
+        }
+    </div>
+    <p>Invitations:</p>
+    <h6>The following people asked you to be in their network</h6>
+    <table class="invitations-table">
+        <tr>
+            <th class="name-header">Name</th>
+            <th class="action-header">Action</th>
+        </tr>
+        @if (Model.Invitations != null)
+        {
+            // Let's iterate through the collection of auctions
+            foreach (var invitation in Model.Invitations)
+            {
+                <tr>
+                    <td class="name-data"><a href="/user/@invitation.InvitationRelatedUserId">@invitation.InvitationRelatedUser.name()</a></td>
+                    <td class="action-data">
+                        <a class="accept-button" href="/profile/invite/@invitation.InvitationRelatedUserId/add">Accept Invite</a>
+                        <a class="ignore-button indent" href="/profile/invite/@invitation.InvitationRelatedUserId/ignore">Ignore</a>
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+</div>
