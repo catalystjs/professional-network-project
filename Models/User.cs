@@ -31,7 +31,7 @@ namespace beltexam2.Models
         [Required]
         [EmailAddressAttribute]
         [MinLength(3)]
-        [MaxLength(20)]
+        [MaxLength(255)]
         [Display(Name = "Username")]
         public string Email { get; set; }
         [Required]
